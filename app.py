@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import os
 import json
-import pyperclip
+
 from datetime import datetime
 from hashlib import sha256
 
@@ -231,10 +231,7 @@ else:
             report_text = "\n".join(report_lines)
             st.text_area("Отчет:", value=report_text, height=300)
 
-            # Кнопка для копирования отчета
-            if st.button("Скопировать отчет"):
-                pyperclip.copy(report_text)
-                st.success("Отчет скопирован в буфер обмена!")
+
 
     # Вкладка 2: Добавление игрока
     with tab2:
